@@ -1,1 +1,6 @@
-## load balancer using Node.js + Express.js
+load balancer using Node.js + Express.js
+
+run node index.js to start the load balancer
+start all the test servers 
+run command curl -k https://localhost/app to check load balancing
+run command curl -k https://localhost/health to check health status
