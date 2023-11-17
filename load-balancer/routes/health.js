@@ -1,26 +1,12 @@
 const express = require('express');
 const axios = require('axios');
-const servers = [
-  {
-    host: 'localhost',
-    port: 3003,
-    weight: 1,
-  },
-  {
-    host: 'localhost',
-    port: 3001,
-    weight: 1,
-  },
-  {
-    host: 'localhost',
-    port: 3002,
-    weight: 2,
-  },
-];
+const constants = require('../constants');
+
 const router = express.Router();
 
 router.get('/health', async (req, res) => {
 
+  const servers = constants.servers;
   const results = [];
 
   for (let i = 0; i < servers.length; i++) {

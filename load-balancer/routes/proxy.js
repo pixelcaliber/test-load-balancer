@@ -1,24 +1,10 @@
 const express = require('express'); 
 const { createProxyMiddleware } = require('http-proxy-middleware');
+const constants = require('../constants');
 
 const router = express.Router();
-const servers = [
-  {
-    host: 'localhost',
-    port: 3003,
-    weight: 1,
-  },
-  {
-    host: 'localhost',
-    port: 3001,
-    weight: 1,
-  },
-  {
-    host: 'localhost',
-    port: 3002,
-    weight: 2,
-  },
-];
+const servers = constants.servers;
+
 const proxyOptions = {
   target: '',
   changeOrigin: true,

@@ -1,4 +1,4 @@
-export const servers = [
+const servers = [
   {
     host: 'localhost',
     port: 3003,
@@ -15,3 +15,6 @@ export const servers = [
     weight: 2,
   },
 ];
+module.exports = {
+  servers
+};
