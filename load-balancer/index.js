@@ -14,8 +14,8 @@ const app = express();
 app.use('/app', proxyRouter);
 app.use('/', healthRouter);
 
-https.createServer(options, app).listen(4001, () => {
-  console.log('Load balancer is listening to port 4001');
+https.createServer(options, app).listen(4000, () => {
+  console.log('Load balancer is listening to port 4000');
 });
 
 
